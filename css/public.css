@@ -1,0 +1,17 @@
+*{
+	margin: 0;/*  border-8px */
+	text-decoration: none;
+	font-style: normal;
+	padding: 0;
+	list-style: none;
+}
+a:link {
+text-decoration: none;
+
+}
+a:visited {
+text-decoration: none;
+}
+a:hover {
+text-decoration: none;
+}
