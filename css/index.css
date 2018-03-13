@@ -33,6 +33,18 @@
 	position: fixed;
 	top: 0;
 	right: 0;
+	height: 100%;
+}
+.rightnav_nbt{
+	width: 35px;
+	height: 30px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	cursor: pointer;
+}
+.rightnav_nbt:hover{
+	background-color: #ff6700;
 }
 .rightnav_n1{
 	width: 35px;
@@ -58,16 +70,40 @@
 }
 .head_l1{
 	float: left;
-	width: 65px;
+	width: 83px;
 	height: 35px;
 	padding:  0 10px;
 	display: block;
 	color: #666;
 	line-height: 35px;
 	font-size: 12px;
+	position: relative;
+	box-sizing:border-box;
+}
+.head_l1bot{
+	width: 800px;
+	height: 0px;
+	background: #fff;
+	position: absolute;
+	top: 36px;
+	left: 0;
+	transition: all .3s;
+	border-bottom: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	box-sizing: border-box;
+	display: none;
 }
 .head_l1:hover{
 	color: #ff6700;
+	background-color: #fff;
+	border-top: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+}
+.head_l1:hover>.head_l1bot{
+	height: 100px;
+	display: block;
 }
 .head_main em{
 	float: right;
@@ -338,6 +374,31 @@
 	height: 440px;
 	float: left;
 	background-color: #333;
+	position: relative;
+
+}
+.banner_leftbox{
+	width: 0px;
+	height: 440px;
+	background-color: red;
+	position: absolute;
+	top: 0;
+	left: 190px;
+	z-index: 9999;
+	overflow: hidden;
+	transition: all .2s;
+}
+.banner_leftinner{
+	width: 900px;
+	height: 440px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: pink;
+	/* display: none; */
+}
+.special2{
+	z-index: 99999;
 }
 .banner_leftt {
 	float: left;
@@ -401,11 +462,45 @@
 	overflow: hidden;
 
 }
-.banner_mi img{
-	position: absolute;
-	top: 0;
-	left: 0;
+.imgbox{
+	width: 830px;
+	height: 440px;
+
 }
+.imgbox li{
+            width: 830px;
+            height: 440px;
+            position:absolute;
+            left:0;
+            top:0;
+            transition:all .6s ease-in;
+            opacity: 0.7;
+        }
+ .imgbox  li.active{
+       z-index: 9;
+       opacity: 1;
+        }
+  .pagebox{
+          width: 200px;
+            height: 10px;
+            position: absolute;
+            bottom:20px;
+            right:340px;
+            z-index: 999;
+        }
+   .pagebox li{
+            width: 15px;
+            height: 15px;
+            margin:0 10px;
+            float:left;
+            background: white;
+            border-radius: 50%;
+            border:1px solid #ccc;
+            cursor: pointer;
+        }
+  .pagebox li.active{
+  	background-color: #ff6700;
+  }
 .banner_mir{
 	position: absolute;
 	top: 5px;
@@ -413,7 +508,7 @@
 	width: 150px;
 	height: 213px;
 	float: right;
-	z-index: 1;
+	z-index: 99;
 	background-color: #fff;
     
 }
@@ -423,7 +518,7 @@
 	right: 4px;
 	width: 150px;
 	height: 213px;
-	z-index: 1;
+	z-index: 99;
 	background-color: #fff;
 
 }
@@ -446,12 +541,12 @@
 .banner_mir img{
 	width: 140px;
 	height: 140px;
-	margin: 68px 5px 5px;
+	margin:  5px 5px;
 }
 .banner_mir2 img{
 	width: 140px;
 	height: 140px;
-	margin: 68px 5px 5px;
+	margin: 5px 5px;
 }
 .banner_mijiantou1{
 	width: 30px;
@@ -460,7 +555,7 @@
 	position: absolute;
 	top: 188px;
 	right: 0;
-	z-index: 2;
+	z-index: 999;
 	color: #fff;
 	text-align: center;
 	line-height: 64px;
@@ -482,7 +577,7 @@
 	position: absolute;
 	top: 188px;
 	left: 0;
-	z-index: 2;
+	z-index: 999;
 	color: #fff;
 	text-align: center;
 	line-height: 64px;
@@ -549,7 +644,6 @@
 	width: 75px;
 	height: 26px;
 	text-align: center;
-	background-color: pink;
 	color: #333;
 	font-size: 12px;
 	line-height: 26px;
@@ -565,7 +659,6 @@
 	width: 75px;
 	height: 26px;
 	text-align: center;
-	background-color: pink;
 	color: #333;
 	font-size: 12px;
 	line-height: 26px;
@@ -1795,7 +1888,7 @@
 .biqiang_right_item h1{
 	font-size: 11px;
 	color: #999;
-	margin: 20px;
+	margin: 0 20px;
 	font-weight: 400;
 }
 .like{
@@ -1953,11 +2046,10 @@
 	height:79px;
 	margin: 0 auto;
 	background-color: #f5f5f5; 
-	overflow: hidden;
 }
 .map_top_huangyuan{
 	width: 165px;
-	height: 97px;
+	height: 79px;
 	margin-right: 70px;
 	float: left;
 }
@@ -2000,7 +2092,6 @@
 	height: 180px;
 	background-color: #f5f5f5;
 	margin: 0 auto;
-	overflow: hidden;
 	border-top: 1px solid #eaeaea;
 }
 .map_zhinan_item{
@@ -2220,3 +2311,50 @@
 .nav_fuhao:hover{
 	transform:rotate(180deg);
 }
+.kongnav{
+	width: 100%;
+	height: 50px;
+	background: #ccc;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 999;
+	display: none;
+}
+.kongnav_box{
+	width: 1190px;
+	height: 50px;
+	background: red;
+	margin: 0 auto;
+}
+.sidenav{
+	position: fixed;
+    width: 68px;
+    height: 300px;
+    display: none;
+    padding-top: 9px;
+    border: 1px solid #DDD;
+    background: #f8f8f8;
+    bottom: 100px;
+    left: 50%;
+    z-index: 999;
+    margin-left: -665px;
+
+}
+.sidenav_woc{
+	width: 68px;
+	height: 29px;
+	border-top: 1px solid  #DDD;
+	cursor: pointer;
+	text-align: center;
+	line-height: 29px;
+	font-size: 14px;
+}
+.sidenav_woc:hover{
+	background-color: #ff6700;
+	color: #fff;
+}
+.special{
+	background-color: #ff6700;
+    color: #fff;
+ }
